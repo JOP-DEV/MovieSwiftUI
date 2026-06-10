@@ -38,5 +38,5 @@ struct HListView: View {
 }
 
 #Preview {
-    HListView(header: Constants.trending)
+    HListView(header: Constants.trendingMovies)
 }
