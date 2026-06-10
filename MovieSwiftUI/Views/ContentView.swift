@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         TabView {
             Tab(Constants.home, systemImage: "house") {
-                Text(Constants.home)
+                HomeView()
             }
             Tab(Constants.upComing, systemImage: "play.circle.fill") {
                 Text(Constants.upComing)
