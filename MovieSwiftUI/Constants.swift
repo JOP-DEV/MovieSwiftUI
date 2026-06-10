@@ -12,4 +12,8 @@ struct Constants {
     static let download = "Download"
     static let upComing = "Upcoming"
     static let search = "Search"
+    
+    static let testTitleURL = "https://image.tmdb.org/t/p/w500/nnl6OWkyPpuMm595hmAxNW3rZFn.jpg"
+
+    static let play = "Play"
 }
