@@ -53,6 +53,9 @@ struct HomeView: View {
                     }
                     
                     HListView(header: Constants.trendingMovies, titles: viewModel.trendingMovies)
+                    HListView(header: Constants.trendingTv, titles: viewModel.trendingTV)
+                    HListView(header: Constants.topRateMovies, titles: viewModel.topRateMovies)
+                    HListView(header: Constants.topRateTv, titles: viewModel.topRateTV)
                     
                 }
             case .failure(let error):

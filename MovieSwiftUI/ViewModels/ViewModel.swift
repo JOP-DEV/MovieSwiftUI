@@ -20,12 +20,18 @@ class ViewModel {
     private let apiService = APIService()
     
     var trendingMovies: [Title] = []
+    var trendingTV: [Title] = []
+    var topRateMovies: [Title] = []
+    var topRateTV: [Title] = []
     
     func getTitles() async {
         homeStatus = .loading
         
         do {
-            trendingMovies = try await apiService.fetchTitles(for: "movie")
+            trendingMovies = try await apiService.fetchTitles(for: "movie", by: "trending")
+            trendingTV = try await apiService.fetchTitles(for: "tv", by: "trending")
+            topRateMovies = try await apiService.fetchTitles(for: "movie", by: "top_rated")
+            topRateTV = try await apiService.fetchTitles(for: "tv", by: "top_rated")
             homeStatus = .success
         } catch {
             print(error)
