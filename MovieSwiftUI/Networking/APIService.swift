@@ -41,6 +41,8 @@ struct APIService {
         
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        return try decoder.decode(Titles.self, from: data).results
+        var titles = try decoder.decode(Titles.self, from: data).results
+        Constants.addPosterPath(to: &titles)
+        return titles
     }
 }
